@@ -4,20 +4,20 @@ THis is a Time series forecasting Project using ARIMA model.
 The data was compiles and stored in a Database "retail store" in Postgresql with PgAdmin4. 
 The Database records the different transactions each customer makes in a retail store. There are three tables in the database.   
 - **sales** table which records the Time each customer makes a trasaction. The sales table includes:-   
-id (Primary key) and   
-sales_date (Timestamp: the time the customer checks out their purchase)
-- **sales_item** table records the the entire transaction refrencing both the sales and product tables to records all the items bought, the quantity of each item and the total price for each item. the sales_item table includes:-   
-id (primary key)
-sales_id (foreign key to sales.id)
-product_id (foreign key to product.id)
-quantity_sold (the amt of each item bought (integer))
-total_sell_price (the total amout of money paid per item (integer))
-- **product** table records the different product (names) in the retail store. the product table includes:-   
-id (primary key)   
-name (name of product (string))
+  - id (Primary key) and   
+  - sales_date (Timestamp: the time the customer checks out their purchase)
+- **sales_item** table records the the entire transaction refrencing both the sales and product tables to records all the items bought, the quantity of each item and the total price for each item. The sales_item table includes:-   
+  - id (primary key)
+  - sales_id (foreign key to sales.id)
+  - product_id (foreign key to product.id)
+  - quantity_sold (the amt of each item bought (integer))
+  - total_sell_price (the total amout of money paid per item (integer))
+- **product** table records the different product (names) in the retail store. The product table includes:-   
+  - id (primary key)   
+  - name (name of product (string))
 
 ##### Prep
-Creating the tables in the database "retail_store", the data was used initially to:-   
+Creating the tables in the database "retail_store", the data was used for the following insights:-   
 - Know the revenue by week of all sales in 2020   
 - Know the weeks where the retail store made less than a weekly target of 50   
 - Know the months where the retail store made more than the yearly average (yr 2020)   
